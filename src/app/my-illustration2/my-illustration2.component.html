@@ -1,8 +1,9 @@
 <body class="b">
 
   <br><br><br>
-  <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
-    <h2>Username:</h2>
+  <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)"
+    style="background-image: url('  https://media.istockphoto.com/vectors/clouds-of-dialogue-bubbles-for-talking-vector-vector-id1189484012?k=6&m=1189484012&s=612x612&w=0&h=NAJZZoHAPxTSic52kY1E1bTFHwigYLxngUdEN2TURR4= ');">
+    <h2>Your Name:</h2>
     <input
       type="text"
       ngModel
@@ -37,10 +38,31 @@
       form="usrform"
       placeholder=" Enter text here..."
     ></textarea>
-
+    <br><br>
     <button (click)="signin()">
       submit
     </button>
   </form>
 </body>
+
+
+<script>
+  const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+    const info = document.querySelector(".alert-info");
+    const error = document.querySelector(".alert-error");
+
+    function process(event) {
+      event.preventDefault();
+
+      const phoneNumber = phoneInput.getNumber();
+
+      info.style.display = "";
+      info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+    }
+</script>
 <br><br><br><br><br><br><br><br><br><br><br><br>
