@@ -1,0 +1,22 @@
+form {
+  border: 2px black solid;
+  margin: -1%;
+  padding: 100px;
+  color: black;
+  font-family: cursive;
+  margin-left: 500px;
+  content: icon;
+  text-align: left;
+  background-color: rgb(184, 207, 199);
+}
+
+#description {
+  height: 500px;
+}
+.b {
+  height: 750px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

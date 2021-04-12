@@ -1,0 +1,46 @@
+<body class="b">
+
+  <br><br><br>
+  <form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+    <h2>Username:</h2>
+    <input
+      type="text"
+      ngModel
+      name="user"
+      placeholder="Enter Your Name (optional)"
+    />
+
+    <h2>Phone Number:</h2>
+    <input
+      type="tel"
+      id="phone"
+      ngModel
+      name="phone"
+      placeholder="Enter Your Phone Number"
+    />
+
+    <h2>E-mail:</h2>
+    <input type="email" ngModel name="email" placeholder="Enter Your E-mail" />
+    <h2>Date:</h2>
+    <input type="date" ngModel name="date" placeholder=" " />
+
+    <h2>What are you feeling about this？</h2>
+    <input type="range" ngModel name="range" placeholder=" " />
+    <h2>Post picture</h2>
+    <input type="file" ngModel name="file" placeholder=" " />
+
+    <h2>What is your feed back?</h2>
+    <textarea
+      rows="4"
+      cols="50"
+      name="comment"
+      form="usrform"
+      placeholder=" Enter text here..."
+    ></textarea>
+
+    <button (click)="signin()">
+      submit
+    </button>
+  </form>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
